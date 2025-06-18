@@ -3,8 +3,8 @@ INPUT:
   TRANSFORMS: ["random_flip", "random_translation", "normalize"]
 
 DATASET:
-  NAME: "SSDGDigitsDG"
-  NUM_LABELED: 150
+  NAME: "SSDGMiniDomainNet"
+  NUM_LABELED: 3780 # 10 for each source domain
 
 MODEL:
   BACKBONE:
