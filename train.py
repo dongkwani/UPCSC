@@ -13,6 +13,7 @@ import copy
 import datasets.ssdg_pacs
 import datasets.ssdg_officehome
 import datasets.ssdg_digitsdg
+import datasets.ssdg_minidomainnet
 
 # trainers
 import trainers.erm

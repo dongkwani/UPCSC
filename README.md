@@ -17,7 +17,7 @@ You also need to prepare the weight of the decoder and the VGG for [AdaIN](https
 
 ## Dataset Preperation
 
-We support datasets PACS, OfficeHome, and DigitDG in this repository. Please download the datasets from the official links, and follow dataset structure below. You have to provide the location of root directory of datasets in the shell scripts which can be found in `scripts/`, as python parameter '--root'.
+We support datasets PACS, OfficeHome, DigitDG, and miniDomainNet in this repository. Please download the datasets from the official links, and follow dataset structure below. You have to provide the location of root directory of datasets in the shell scripts which can be found in `scripts/`, as python parameter '--root'.
 
 ```
 $DATA/
@@ -37,9 +37,16 @@ $DATA/
 |   |-- svhn/
 |   |-- syn/
 |   |–– splits_ssdg/
+|-- domainnet/
+|   |-- clipart/
+|   |-- image_list/
+|   |-- painting/
+|   |-- real/
+|   |-- sketch/
+|   |–– splits_mini_ssdg/
 ```
 
-The labeled-unlabeled splits (5 per class & 10 per class) can be downloaded at the following links: [pacs](https://drive.google.com/file/d/1PSliZDI9D-_Wrr3tfRzGVtN2cpM1892p/view?usp=sharing), [officehome](https://drive.google.com/file/d/1hASLWAfkf4qj-WXU5cx9uw9rQDsDvSyO/view?usp=sharing), [digitsdg](https://drive.google.com/file/d/1ltgwO_HMnv9UudYmk3IfTaEUtDa2dLNF/view?usp=sharing). The splits need to be extracted and placed to each dataset folders' `splits_ssdg/` directory. We provide five random splits used in the experiment, and if more splits are needed, more splits can be easily created by random selection.
+The labeled-unlabeled splits (5 per class & 10 per class) can be downloaded at the following links: [pacs](https://drive.google.com/file/d/1PSliZDI9D-_Wrr3tfRzGVtN2cpM1892p/view?usp=sharing), [officehome](https://drive.google.com/file/d/1hASLWAfkf4qj-WXU5cx9uw9rQDsDvSyO/view?usp=sharing), [digitsdg](https://drive.google.com/file/d/1ltgwO_HMnv9UudYmk3IfTaEUtDa2dLNF/view?usp=sharing), [minidomainnet](https://drive.google.com/file/d/1j7tdAXH-AWH5HmO9L0wPrRw9mw1zI9lW/view?usp=sharing). The splits need to be extracted and placed to each dataset folders' `splits_ssdg/` directory (`splits_mini_ssdg` for minidomainnet). We provide five random splits used in the experiment, and if more splits are needed, more splits can be easily created by random selection.
 
 
 ## Run UPCSC
@@ -53,6 +60,9 @@ The labeled-unlabeled splits (5 per class & 10 per class) can be downloaded at t
 
 # DigitsDG dataset
 ./scripts/UPCSC.sh ssdg_digitdg
+
+# miniDomainNet dataset
+./scripts/UPCSC.sh ssdg_minidomainnet
 ```
 You can also run ERM and StyleMatch method using `ERM.sh` and `StyleMatch.sh`.
 
@@ -66,6 +76,7 @@ The **NLAB** parameter specifies how many labeled data points to use, and the NL
 |`ssdg_pacs`| 210 | 105 |
 |`ssdg_officehome`| 1950 | 975 |
 |`ssdg_digitdg`| 300 | 150 |
+|`ssdg_minidomainnet`| 3780 | 1890 |
 
 
 ## Citation

@@ -45,6 +45,17 @@ for NLAB in 10 5
             D2=mnist_m
             D3=svhn
             D4=syn
+        elif [ ${DATASET} == ssdg_minidomainnet ]; then
+            if [ ${NLAB} == 5 ]; then
+                NLAB=1890
+            elif [ ${NLAB} == 10 ]; then
+                NLAB=3780
+            fi
+            PREFIX=10epoch
+            D1=clipart
+            D2=painting
+            D3=real
+            D4=sketch
         fi
 
         for SEED in $(seq 1 5)
