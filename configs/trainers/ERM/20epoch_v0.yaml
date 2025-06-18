@@ -20,7 +20,7 @@ TRAIN:
   PRINT_FREQ: 10
 
 ##########
-# FixMatch
+# ERM
 ##########
 TRAINER:
   STYLEMATCH:
