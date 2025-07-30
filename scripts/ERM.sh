@@ -8,14 +8,14 @@ TRAINER=ERM
 NET=resnet18
 
 
-for NLAB in 10 5
+for EX_PER_CLASS in 10 5
     do
     for CFG in v0
         do
         if [ ${DATASET} == ssdg_pacs ]; then
-            if [ ${NLAB} == 5 ]; then
+            if [ ${EX_PER_CLASS} == 5 ]; then
                 NLAB=105
-            elif [ ${NLAB} == 10 ]; then
+            elif [ ${EX_PER_CLASS} == 10 ]; then
                 NLAB=210
             fi
             PREFIX=20epoch
@@ -24,9 +24,9 @@ for NLAB in 10 5
             D3=photo
             D4=sketch
         elif [ ${DATASET} == ssdg_officehome ]; then
-            if [ ${NLAB} == 5 ]; then
+            if [ ${EX_PER_CLASS} == 5 ]; then
                 NLAB=975
-            elif [ ${NLAB} == 10 ]; then
+            elif [ ${EX_PER_CLASS} == 10 ]; then
                 NLAB=1950
             fi
             PREFIX=20epoch
@@ -35,9 +35,9 @@ for NLAB in 10 5
             D3=product
             D4=real_world
         elif [ ${DATASET} == ssdg_digitdg ]; then
-            if [ ${NLAB} == 5 ]; then
+            if [ ${EX_PER_CLASS} == 5 ]; then
                 NLAB=150
-            elif [ ${NLAB} == 10 ]; then
+            elif [ ${EX_PER_CLASS} == 10 ]; then
                 NLAB=300
             fi
             PREFIX=20epoch
@@ -46,9 +46,9 @@ for NLAB in 10 5
             D3=svhn
             D4=syn
         elif [ ${DATASET} == ssdg_minidomainnet ]; then
-            if [ ${NLAB} == 5 ]; then
+            if [ ${EX_PER_CLASS} == 5 ]; then
                 NLAB=1890
-            elif [ ${NLAB} == 10 ]; then
+            elif [ ${EX_PER_CLASS} == 10 ]; then
                 NLAB=3780
             fi
             PREFIX=10epoch
