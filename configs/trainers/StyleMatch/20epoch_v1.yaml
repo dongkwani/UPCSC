@@ -12,7 +12,7 @@ DATALOADER:
 OPTIM:
   NAME: "sgd"
   LR: 0.003
-  MAX_EPOCH: 10
+  MAX_EPOCH: 20
   LR_SCHEDULER: "cosine"
 
 TRAIN:
