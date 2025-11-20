@@ -1,4 +1,4 @@
-# Unlocking the Potential of Unlabeled Data in Semi-Supervised Domain Generalization
+# Unlocking the Potential of Unlabeled Data in Semi-Supervised Domain Generalization (CVPR 2025)
 
 This code is the official implementation of the following paper: [Unlocking the Potential of Unlabeled Data in Semi-Supervised Domain Generalization](https://arxiv.org/abs/2503.13915). The paper addresses a practical yet under-explored challenge in semi-supervised domain generalization: how to effectively utilize unconfident unlabeled data that existing methods typically discard. While current approaches focus on confident pseudo-labels, they overlook valuable learning signals in uncertain predictions. Our approach, UPCSC, introduces two novel modules: 1) Unlabeled Proxy-based Contrastive Learning (UPC) that treats unconfident samples as informative negative pairs, and 2) Surrogate Class Learning (SC) that generates positive pairs from confusion patterns. This plug-and-play framework integrates seamlessly into existing methods without requiring domain labels. Experiments on four benchmarks demonstrate consistent improvements in accuracy and generalization.
 
